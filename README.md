@@ -1,27 +1,35 @@
 # AI Dev Journal 📓
 
-An automated developer journaling system that turns your Git commits into thoughtful, AI-generated journal entries and weekly insight reports.
+An automated developer journaling system that transforms Git commits into AI-generated reflections and weekly engineering insight reports.
+
+Built with Python and Ollama using fully local LLM workflows.
 
 ## Features
-- **Daily Journaling**: Automatically analyzes your latest commit and generates a first-person journal entry.
-- **Weekly Insights**: Compiles daily entries into a structured report with patterns, blind spots, and a learning plan.
-- **Local AI**: Uses [Ollama](https://ollama.ai/) with the `qwen3:8b` model for private, local processing.
 
-## Setup
+- **Daily Journaling**  
+  Analyzes your latest Git commit and generates a first-person developer reflection.
 
-1. **Install dependencies**:
-   ```bash
-   pip install ollama
-   ```
+- **Weekly Insights**  
+  Compiles journal entries into a structured report with:
+  - coding patterns
+  - blind spots
+  - growth areas
+  - personalized learning plans
 
-2. **Configure**:
-   Update `config.py` with your repository path and desired Ollama model.
+- **Local AI**  
+  Uses Ollama with local models (`qwen3:8b`) for fully offline and private processing.
 
-3. **Usage**:
-   - Run `python diary.py` after a commit to generate a daily entry.
-   - Run `python weekly_report.py` to generate your weekly insight report.
+---
 
-## Technology Stack
-- Python
-- Git
-- Ollama (LLM: qwen3:8b)
+## Workflow
+
+```text
+Git Commit
+    ↓
+Python Automation
+    ↓
+Ollama Local Model
+    ↓
+Daily Journal
+    ↓
+Weekly Insight Report
