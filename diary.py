@@ -40,8 +40,9 @@ A developer just made a commit. Write a SHORT personal journal entry
 Include:
 1. What they built or changed (1-2 sentences)
 2. One habit or pattern you notice from the diff
-3. One tip or encouragement for tomorrow
-4. A focus score out of 10
+3. **Technical Debt or Risks**: One thing that might need refactoring or a potential bug introduced.
+4. One tip or encouragement for tomorrow
+5. A focus score out of 10
 
 Commit message: {commit_msg}
 Files changed: {files_changed}
