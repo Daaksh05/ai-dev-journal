@@ -34,23 +34,41 @@ def get_latest_commit_info():
 
 def write_journal_entry(commit_msg, files_changed, diff):
     prompt = f"""You are a thoughtful developer journal assistant.
-A developer just made a commit. Write a SHORT personal journal entry
-(150 words) in first person as if the developer wrote it.
 
-Include:
-1. What they built or changed (1-2 sentences)
-2. One habit or pattern you notice from the diff
-3. **Technical Debt or Risks**: One thing that might need refactoring or a potential bug introduced.
-4. One tip or encouragement for tomorrow
-5. A focus score out of 10
+A developer just made a commit.
 
-Commit message: {commit_msg}
-Files changed: {files_changed}
+Write a clean, insightful developer reflection in markdown format.
+
+Keep it under 120 words.
+
+Use this exact structure:
+
+## Today's Progress
+Explain what was built or changed.
+
+## Patterns Noticed
+Mention one coding habit or workflow pattern observed.
+
+## Technical Debt or Risks
+Mention one possible refactor need, risk, or bug.
+
+## Tomorrow's Focus
+Give one short improvement suggestion or encouragement.
+
+## Focus Score
+Give a score out of 10.
+
+Commit message:
+{commit_msg}
+
+Files changed:
+{files_changed}
+
 Code diff:
 {diff}
 
-Write the journal entry now. No preamble."""
-
+Write only the markdown journal entry.
+"""
     print(f"\n[diary] Thinking with {MODEL}...\n")
     response = ollama.chat(
         model=MODEL,
